@@ -10,9 +10,10 @@ df = pd.read_csv('weather_data.csv')
 train_df, test_df = data_preprocessing.preprocess_data(df)
 
 # Train the model
-model = model_training.train_model(train_df)
+rf_model, lstm_model = model_training.train_model(train_df)
 
 # Evaluate the model
-mae = model_evaluation.evaluate_model(model, test_df)
+rf_mae, lstm_mae = model_evaluation.evaluate_model(rf_model, lstm_model, test_df)
 
-print(f"Mean Absolute Error: {mae}")
+print(f"Random Forest Mean Absolute Error: {rf_mae}")
+print(f"LSTM Mean Absolute Error: {lstm_mae}")
