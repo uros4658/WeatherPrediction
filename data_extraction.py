@@ -11,9 +11,9 @@ longitude = 20.4489
 
 # Define the start and end dates for the historical period you're interested in
 end_date = datetime.now()
-start_date = end_date - timedelta(days=50)
+start_date = end_date - timedelta(days=25)
 
-# Initialize a list to hold all the data
+# Initialize a list to hold all the data  
 all_data = []
 
 # Loop over each day in the range
